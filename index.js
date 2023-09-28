@@ -23,18 +23,18 @@ const {
   CustomerInfo,
   VendorInfo,
   ShipperInfo,
-} = require ("./LoginInfo")
+} = require ("./src/LoginInfo")
 
-const productModel = require ("./productInfo")
+const productModel = require ("./src/productInfo")
 
-const connect = require("../DB connect/mongo");
+const connect = require("./DB connect/mongo");
 const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
 
-const tempelatePath = path.join(__dirname, "../views");
-const publicPath = path.join(__dirname, "../asset");
+const tempelatePath = path.join(__dirname, "./views");
+const publicPath = path.join(__dirname, "./asset");
 console.log(publicPath);
 
 
